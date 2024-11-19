@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salitre_go.atraccion_info"
+             Title="atraccion_info"
+            BackgroundImageSource="background.png">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="0" Padding="0">
+
+            <Label
+                Text="Atraccion"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="34"
+                FontAttributes="Bold"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+
+            <Label
+                Text="Estado"
+                Style="{StaticResource SubHeadline}"
+                Background="#1c2120"
+                HorizontalOptions="FillAndExpand"  
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                Padding="5"
+                TextColor="White"/>
+
+            <Image 
+                Source="atraccionimagen.png"
+                WidthRequest="400"   
+                HeightRequest="400"
+                HorizontalOptions="Center"
+                VerticalOptions="Start" />
+
+            <Label
+                Text="Estado"
+                Style="{StaticResource SubHeadline}"
+                Background="#1c2120"
+                HorizontalOptions="FillAndExpand"  
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                Padding="5"
+                TextColor="White"/>
+
+            <Label
+                Text="Eorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500"
+                Style="{StaticResource SubHeadline}"
+                BackgroundColor="#80808080"  
+                HorizontalOptions="FillAndExpand"  
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                Padding="20"
+                TextColor="White"
+                FontSize="14"/>
+
+            <Label
+                Text="Estado"
+                Style="{StaticResource SubHeadline}"
+                Background="#1c2120"
+                HorizontalOptions="FillAndExpand"  
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                Padding="5"
+                TextColor="White"/>
+
+            <Label
+                Text="Eorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500"
+                Style="{StaticResource SubHeadline}"
+                BackgroundColor="#80808080"  
+                HorizontalOptions="FillAndExpand"  
+                VerticalOptions="Start" 
+                HorizontalTextAlignment="Start"
+                Padding="20"
+                TextColor="White"
+                 FontSize="14"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
