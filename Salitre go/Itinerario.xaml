@@ -3,10 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Salitre_go.Itinerario"
              Title="Itinerario">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="#7b2ff7" Offset="0.0" />
+            <GradientStop Color="#f107a3" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="20" Spacing="30">
+        
+        <Grid ColumnSpacing="10" Margin="0,0,0,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="ITINERARIO" 
+                   FontSize="30" 
+                   FontAttributes="Bold" 
+                   TextColor="Black"
+                   VerticalOptions="Center" 
+                   Grid.Column="0" />
+
+            <Label Text="DIVERSION EXTREMA" 
+                   FontSize="14" 
+                   FontAttributes="Bold" 
+                   TextColor="HotPink"
+                   VerticalOptions="Center" 
+                   Grid.Column="1" />
+        </Grid>
+
+
+        <!-- Título para la fecha -->
+        <Label Text="Fecha para tu visita"
+       FontSize="18"
+       FontAttributes="Bold"
+       TextColor="White"
+       HorizontalOptions="Center"
+       VerticalOptions="Center" />
+
+        <!-- Selector de Fecha centrado -->
+        <Frame CornerRadius="5" BackgroundColor="Black" Padding="5">
+            <Grid>
+                <DatePicker x:Name="FechaVisita"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    TextColor="White" 
+                    FontAttributes="Bold"
+                    WidthRequest="90" />
+            </Grid>
+        </Frame>
+
+
+        <CollectionView x:Name="LugaresCollection" 
+                        ItemsSource="{Binding Lugares}" 
+                        Margin="0,10,0,10">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnSpacing="10" RowSpacing="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Entry Grid.Column="0" Placeholder="Hora (ej. 9:00 AM)" 
+                               Text="{Binding Hora}" 
+                               TextColor="Black" />
+
+                        <Entry Grid.Column="1" Placeholder="Lugar a visitar" 
+                               Text="{Binding Lugar}" 
+                               TextColor="Black" />
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        
+        <Button Text="Agregar más lugares"
+                BackgroundColor="#f107a3"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                Command="{Binding AgregarLugarCommand}" />
     </VerticalStackLayout>
 </ContentPage>
+
+
+
+
