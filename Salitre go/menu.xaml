@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salitre_go.menu"
+             Title="menu"
+             BackgroundImageSource="backgroun_menu.png">
+
+    <ScrollView>
+        <VerticalStackLayout >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image 
+                    Grid.Column="1"
+                    Source="logo_salitre.png"
+                    WidthRequest="62"   
+                    HeightRequest="62"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"/>
+
+                <Image 
+                    Grid.Column="2"
+                    Source="carrito.png"
+                    WidthRequest="62"   
+                    HeightRequest="62"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"/>
+            </Grid>
+            <Frame 
+            HorizontalOptions="FillAndExpand" 
+            VerticalOptions="Start" 
+            BackgroundColor="#303030" 
+            Padding="10" 
+            CornerRadius="25"  
+            HasShadow="True"
+            Margin="70,70,0,0">
+
+                <StackLayout 
+                Orientation="Horizontal" 
+                VerticalOptions="Center" 
+                Padding="10">
+
+                    <Label
+                    Text="Mi saldo"
+                    Style="{StaticResource SubHeadline}"
+                    HorizontalTextAlignment="Start"
+                    TextColor="White"
+                    FontSize="14" 
+                    VerticalOptions="Center" />
+
+                    <Label
+                    x:Name="SaldoLabel"
+                    Text=" 0.00" 
+                    Style="{StaticResource SubHeadline}"
+                    HorizontalTextAlignment="End"  
+                    TextColor="White"
+                    FontSize="18" 
+                    VerticalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+
+            <Button
+    Text="Mi cuenta"
+    Style="{StaticResource SubHeadline}"
+    TextColor="White"
+    FontSize="20"
+    VerticalOptions="Center"
+    HorizontalOptions="FillAndExpand"
+    Margin="0,80,0,0"
+    BackgroundColor="#303030"
+                Padding="20"/>
+
+            <Button
+    Text="Mapa"
+    Style="{StaticResource SubHeadline}"
+    TextColor="White"
+    FontSize="20"
+    VerticalOptions="Center"
+    HorizontalOptions="FillAndExpand"
+    Margin="0,60,0,0"
+    BackgroundColor="#303030"
+                Padding="20" />
+
+            <Button
+    Text="Planificar visita"
+    Style="{StaticResource SubHeadline}"
+    TextColor="White"
+    FontSize="20"
+    VerticalOptions="Center"
+    HorizontalOptions="FillAndExpand"
+    Margin="0,60,0,0"
+    BackgroundColor="#303030" 
+                Padding="20"/>
+
+            <Button
+    Text="Atracciones"
+    Style="{StaticResource SubHeadline}"
+    TextColor="White"
+    FontSize="20"
+    VerticalOptions="Center"
+    HorizontalOptions="FillAndExpand"
+    Margin="0,50,0,0"
+    BackgroundColor="#303030" 
+    Padding="20"
+     Clicked="OnButtonClicked"/>
+
+            <Image
+        Source="frase.png"
+        WidthRequest="200"   
+        HeightRequest="100"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>

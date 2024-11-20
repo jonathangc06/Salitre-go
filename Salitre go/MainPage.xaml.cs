@@ -1,4 +1,5 @@
-﻿namespace Salitre_go
+﻿
+namespace Salitre_go
 {
     public partial class MainPage : ContentPage
     {
@@ -11,7 +12,7 @@
         private async void OnNavigateButtonClicked(object sender, EventArgs e)
         {
             // Navega a la SegundaPágina
-            await Navigation.PushAsync(new atraccion_info());
+            await Navigation.PushAsync(new menu());
         }
     }
 
