@@ -68,6 +68,9 @@
 	  <MauiXaml Update="atraccion_info.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Itinerario.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="menu.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
