@@ -11,5 +11,21 @@ public partial class menu : ContentPage
     {
         await Navigation.PushAsync(new atraccion_info());
     }
+    private async void OnButtonItinerarioClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Itinerario());
+    }
+
+    private async void OnButtonMapaClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Itinerario());
+    }
+
+    private async void OnButtonMiCuentaClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Itinerario());
+    }
+
+
 }
 
