@@ -23,6 +23,7 @@
                     HorizontalOptions="Center"/>
 
                 <ImageButton 
+                    Grid.Column="2"
                     Source="carrito.png"
                     WidthRequest="62"
                     HeightRequest="62"

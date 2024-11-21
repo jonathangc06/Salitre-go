@@ -28,7 +28,7 @@ public partial class menu : ContentPage
 
     private async void OnButtonCarritoClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NewPage1()); // Cambia `NewPage1` por el nombre real de tu página.
+        await Navigation.PushAsync(new NewPage1());
     }
 
 }
