@@ -22,13 +22,15 @@
                     VerticalOptions="Center" 
                     HorizontalOptions="Center"/>
 
-                <Image 
-                    Grid.Column="2"
+                <ImageButton 
                     Source="carrito.png"
-                    WidthRequest="62"   
+                    WidthRequest="62"
                     HeightRequest="62"
                     VerticalOptions="Center"
-                    HorizontalOptions="End"/>
+                    HorizontalOptions="End"
+                    Clicked="OnButtonCarritoClicked" />         
+
+
             </Grid>
             <Frame 
             HorizontalOptions="FillAndExpand" 
