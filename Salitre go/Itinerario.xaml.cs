@@ -35,7 +35,7 @@ namespace Salitre_go
             AgregarLugarCommand = new Command(AgregarLugar);
         }
 
-        /
+        
         private void AgregarLugar()
         {
             Lugares.Add(new LugarHorario { Hora = "", Lugar = "" });
