@@ -9,7 +9,7 @@ namespace Salitre_go
             InitializeComponent();
         }
 
-        private async void OnNavigateButtonClicked(object sender, EventArgs e)
+        private async void OneButtonLogIn(object sender, EventArgs e)
         {
             // Navega a la SegundaPágina
             await Navigation.PushAsync(new menu());

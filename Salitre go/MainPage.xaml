@@ -1,29 +1,60 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Salitre_go.MainPage">
+             x:Class="Salitre_go.MainPage"
+             BackgroundImageSource="fondo.jpeg">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+    <StackLayout>
+        <Grid HeightRequest="350">
+            <!-- Fondo con patrones -->
+            <Image Source="pattern_background.png" Aspect="AspectFill" />
+            <!-- Logotipo -->
+            <Image Source="logo_salitre.png"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   WidthRequest="150"
+                   HeightRequest="150" />
+        </Grid>
 
-            <Label
-                Text="Hello, World!"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
+ 
+        <StackLayout Padding="20"
+                     BackgroundColor="Black">
+        </StackLayout>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                Style="{StaticResource SubHeadline}"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
+        <Frame CornerRadius="10"
+        BackgroundColor="White"
+        Padding="5"
+        WidthRequest="300"
+        Margin="0,100,0,0">
+            <Entry Placeholder="Name" TextColor="Black" />
+        </Frame>
 
-            <Button 
-            Text="Ir a la segunda página"
-            Clicked="OnNavigateButtonClicked" />
+   
+        <Frame CornerRadius="10"
+        BackgroundColor="White"
+        Padding="5"
+        WidthRequest="300"
+        Margin="0,10,0,0">
+            <Entry Placeholder="Password"
+      IsPassword="True"
+      TextColor="Black" />
+        </Frame>
 
-        </VerticalStackLayout>
-    </ScrollView>
+     
+        <Button Text="Log In"
+         BackgroundColor="Black"
+         TextColor="White"
+         CornerRadius="10"
+         WidthRequest="300"
+         Clicked ="OneButtonLogIn"
+         Margin="0,10,0,0" />
+
+       
+        <Label Text="Forgot Password?"
+        TextColor="White"
+        HorizontalOptions="Center"
+        Margin="0,50,0,0"
+        FontSize="14" />
+    </StackLayout>
 
 </ContentPage>
