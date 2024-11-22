@@ -9,7 +9,7 @@ public partial class menu : ContentPage
 
     private async void OnButtonClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new atraccion_info());
+        await Navigation.PushAsync(new lista_atracciones());
     }
     private async void OnButtonItinerarioClicked(object sender, EventArgs e)
     {

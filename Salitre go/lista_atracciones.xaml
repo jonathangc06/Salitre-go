@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salitre_go.lista_atracciones"
+             Title="Lista de Atracciones">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#7b2ff7" Offset="0.0" />
+            <GradientStop Color="#f107a3" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <VerticalStackLayout Padding="10">
+        <Label 
+            Text="Lista de Atracciones"
+            FontSize="24"
+            FontAttributes="Bold"
+            BackgroundColor="Black"
+            TextColor="White"
+            HeightRequest="50" />
+
+        <CollectionView x:Name="AtraccionesList"
+                        SelectionMode="Single"
+                        SelectionChanged="OnAtraccionSelected"
+                        Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border Stroke="LightGray" StrokeThickness="1" Padding="10">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10" />
+                        </Border.StrokeShape>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.Column="0"
+                                   Source="{Binding Imagen}"
+                                   WidthRequest="60"
+                                   HeightRequest="60"
+                                   Aspect="AspectFill" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Titulo}"
+                                   VerticalOptions="Center" 
+                                   TextColor="White"
+                                   FontSize="20"
+                                   Margin="10,0,0,0"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
+
+
