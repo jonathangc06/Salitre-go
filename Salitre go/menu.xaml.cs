@@ -23,12 +23,12 @@ public partial class menu : ContentPage
 
     private async void OnButtonMiCuentaClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Itinerario());
+        await Navigation.PushAsync(new Perfil());
     }
 
     private async void OnButtonCarritoClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NewPage1());
+        await Navigation.PushAsync(new Itinerario());
     }
 
 }

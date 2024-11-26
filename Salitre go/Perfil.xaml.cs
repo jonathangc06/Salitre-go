@@ -1,8 +1,8 @@
 namespace Salitre_go;
 
-public partial class NewPage1 : ContentPage
+public partial class Perfil : ContentPage
 {
-	public NewPage1()
+	public Perfil()
 	{
 		InitializeComponent();
 	}
