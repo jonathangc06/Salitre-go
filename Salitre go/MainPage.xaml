@@ -7,7 +7,7 @@
     <StackLayout>
         <Grid HeightRequest="350">
             <Image Source="pattern_background.png" Aspect="AspectFill" />
-            <!-- Logotipo -->
+            
             <Image Source="logo_salitre.png"
                    HorizontalOptions="Center"
                    VerticalOptions="Center"
@@ -48,12 +48,15 @@
          Clicked ="OneButtonLogIn"
          Margin="0,10,0,0" />
 
-       
-        <Label Text="Forgot Password?"
+
+        <Button Text="Forgot Password"
+        BackgroundColor="Transparent"
         TextColor="White"
+        BorderWidth="0"
+        CornerRadius="0"
+        Clicked="OneButtonForgot"
         HorizontalOptions="Center"
-        Margin="0,50,0,0"
-        FontSize="14" />
+        VerticalOptions="Center" />
     </StackLayout>
 
 </ContentPage>

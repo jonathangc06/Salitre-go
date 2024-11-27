@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salitre_go.Recuperar_contraseña"
+             Title="Recuperar_contraseña"
+             BackgroundImageSource="background.jpg">
+
+    <StackLayout Padding="20" Spacing="15" VerticalOptions="CenterAndExpand">
+        <Grid HeightRequest="350">
+
+            <Image Source="pattern_background.png" Aspect="AspectFill" />
+
+            <Image Source="logo_salitre.png"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+       WidthRequest="150"
+       HeightRequest="150" />
+        </Grid>
+
+        <Frame CornerRadius="10" BackgroundColor="White" Padding="5" WidthRequest="300">
+            <Entry x:Name="NewPasswordEntry" Placeholder="New Password" IsPassword="True" TextColor="Black" />
+        </Frame>
+
+
+        <Frame CornerRadius="10" BackgroundColor="White" Padding="5" WidthRequest="300">
+            <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" IsPassword="True" TextColor="Black" />
+        </Frame>
+
+
+        <Button Text="Continue"
+     BackgroundColor="Black"
+     TextColor="White"
+     CornerRadius="10"
+     WidthRequest="300"/>
+    </StackLayout>
+</ContentPage>
