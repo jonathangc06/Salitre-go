@@ -6,7 +6,6 @@
 
     <StackLayout>
         <Grid HeightRequest="350">
-            <!-- Fondo con patrones -->
             <Image Source="pattern_background.png" Aspect="AspectFill" />
             <!-- Logotipo -->
             <Image Source="logo_salitre.png"

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Salitre_go.RegistrarAtraccion"
+             Title="RegistrarAtraccion">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+            <GradientStop Color="#7b2ff7" Offset="0.0" />
+            <GradientStop Color="#f107a3" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="15">
+
+            <Label Text="Título:"
+                   FontSize="Medium" />
+            <Entry Placeholder="Ingrese el título de la atracción"
+                   x:Name="TituloEntry" />
+
+            <Label Text="Cargar Imagen:" 
+                   FontSize="Medium" />
+            <ImageButton Source="placeholder_image.png" 
+                         HeightRequest="150" 
+                         Clicked="OnUploadImageClicked" />
+
+            <Label Text="Descripción:"
+                   FontSize="Medium" />
+            <Editor Placeholder="Ingrese una descripción" 
+                    AutoSize="TextChanges"
+                    x:Name="DescripcionEditor" />
+
+            <Label Text="Estado:" 
+                   FontSize="Medium" />
+            <Picker x:Name="EstadoPicker" Title="Seleccione el estado">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Activo</x:String>
+                        <x:String>Inactivo</x:String>
+                        <x:String>En Mantenimiento</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Tipo:" FontSize="Medium" />
+            <Picker x:Name="TipoPicker" Title="Seleccione el tipo">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Atracciones Extremas</x:String>
+                        <x:String>Atracciones Infantiles</x:String>
+                        <x:String>Atracciones de Aventura</x:String>
+                        <x:String>Atracciones Mecánicas</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Restricciones:" FontSize="Medium" />
+            <Editor Placeholder="Ingrese restricciones (si aplica)" 
+                    AutoSize="TextChanges"
+                    x:Name="RestriccionesEditor" />
+
+            <Button Text="Registrar Atracción"
+                    BackgroundColor="Black"
+                                        TextColor="White"
+
+                    Clicked="OnRegisterClicked" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
